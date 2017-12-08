@@ -119,7 +119,7 @@ def call(body) {
         if (fileExists('pom.xml')) {
           stage ('Maven Build') {
             container ('maven') {
-              def mvnCommand = "mvn -B"
+              def mvnCommand = "mvn"
               if (mavenSettingsConfigMap) {
                 mvnCommand += " --settings /msb_mvn_cfg/settings.xml"
               }
